@@ -1,1 +1,1 @@
-Get-Service | Format-List
+Get-Service | Select-Object Name, Status, DisplayName
