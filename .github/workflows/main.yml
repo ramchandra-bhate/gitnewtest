@@ -32,13 +32,15 @@ jobs:
           
         run: >
           powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
-          -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
+          
+          
+         # -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
 
-          -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }}
+         # -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }}
 
-          -servicePrincipalTenantId ${{ secrets.SERVICE_PRINCIPAL_TENANTID }}
+         # -servicePrincipalTenantId ${{ secrets.SERVICE_PRINCIPAL_TENANTID }}
 
-          -azureSubscriptionName ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+         # -azureSubscriptionName ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
           # -resourceGroupName %RESOURCE_GROUP%
 
