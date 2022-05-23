@@ -24,7 +24,7 @@ jobs:
       # look for ps1 file
       - name: look for ps1 file
         run: |
-          ls '${{ env.OUTPUT_PATH }}\gitnewtest'
+          ls '${{ env.OUTPUT_PATH }}'
       - name: provision RG in Azure
         env:
           RESOURCE_GROUP:  rg-gitewtest
