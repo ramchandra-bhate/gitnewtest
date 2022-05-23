@@ -1,4 +1,4 @@
-az login -u $env:USER_NAME -p $env:PASSWORD
+#az login -u $env:USER_NAME -p $env:PASSWORD
 
 az group create `
   --name RG01 `
