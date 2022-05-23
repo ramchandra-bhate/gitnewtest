@@ -29,6 +29,6 @@ jobs:
                 
         run: >
           powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
-          -username ${{ secrets.USER_NAME }}
-          -password ${{ secrets.PASSWORD }}
+        #  -username ${{ secrets.USER_NAME }}
+         # -password ${{ secrets.PASSWORD }}
       
