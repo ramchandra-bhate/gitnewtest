@@ -33,7 +33,7 @@ jobs:
         run: >
           powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
           
-          az login -u ${{ secrets.USER_Name }} -p ${{ secrets.PASSWORD }}
+          #az login -u ${{ secrets.USER_Name }} -p ${{ secrets.PASSWORD }}
           
          # -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
 
