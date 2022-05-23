@@ -32,18 +32,6 @@ jobs:
           
         run: >
           powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
-          
-          #az login -u ${{ secrets.USER_Name }} -p ${{ secrets.PASSWORD }}
-          
-         # -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
-
-         # -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }}
-
-         # -servicePrincipalTenantId ${{ secrets.SERVICE_PRINCIPAL_TENANTID }}
-
-         # -azureSubscriptionName ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
-          # -resourceGroupName %RESOURCE_GROUP%
-
-          # -resourceGroupNameRegion %RESOURCE_GROUP_REGION%
+          -username ${{ secrets.USER_NAME }}
+          -password ${{ secrets.PASSWORD }}
       
