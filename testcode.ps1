@@ -1,6 +1,6 @@
 az login `
-  --username $username  `
-  --password $password
+  --username ${{ secrets.USER_NAME }}  `
+  --password ${{ secrets.PASSWORD }}
 
 az group create `
   --name RG01 `
