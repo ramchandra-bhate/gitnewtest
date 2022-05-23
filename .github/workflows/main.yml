@@ -26,10 +26,7 @@ jobs:
         run: |
           ls '${{ env.OUTPUT_PATH }}'
       - name: provision RG in Azure
-        env:
-          RESOURCE_GROUP:  rg-gitewtest
-          RESOURCE_GROUP_REGION: southcentralus
-          
+                
         run: >
           powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
           -username ${{ secrets.USER_NAME }}
