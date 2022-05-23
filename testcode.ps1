@@ -1,4 +1,6 @@
-az login -u $username -p $password
+az login `
+  --username $username  `
+  --password $password
 
 az group create `
   --name RG01 `
