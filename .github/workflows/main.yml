@@ -2,17 +2,12 @@
 
 name: First Ci-CD pipeline
 
-
 env:
   OUTPUT_PATH: ${{ github.workspace}}
 
 
 on: [push]
   
-
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,7 +24,7 @@ jobs:
       # look for ps1 file
       - name: look for ps1 file
         run: |
-        ls '${{ env.OUTPUT_PATH }}\gitnewtest'
+          ls '${{ env.OUTPUT_PATH }}\gitnewtest'
       - name: provision RG in Azure
         env:
           RESOURCE_GROUP:  rg-gitewtest
