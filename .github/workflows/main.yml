@@ -28,7 +28,8 @@ jobs:
       - name: provision RG in Azure
                 
         run: >
-          powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
+           powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
+           az login --username ${{ secrets.USER_NAME }} --password ${{ secrets.PASSWORD }}
         #  -username ${{ secrets.USER_NAME }}
          # -password ${{ secrets.PASSWORD }}
       
