@@ -29,8 +29,8 @@ jobs:
                 
         run: >
            powershell -command "& '${{ env.OUTPUT_PATH }}\testcode.ps1'"
-           -username ${{ secrets.USER_NAME }} 
-           -password ${{ secrets.PASSWORD }}
-        #  -username ${{ secrets.USER_NAME }}
-         # -password ${{ secrets.PASSWORD }}
-      
+           -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
+           -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }}
+           -servicePrincipalTenantId ${{ secrets.SERVICE_PRINCIPAL_TENANTID }}
+           -azureSubscriptionName ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+

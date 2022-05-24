@@ -1,4 +1,8 @@
- az login --username $username --password $password
+az login `
+--service-principal `
+--username $servicePrincipal `
+--password $servicePrincipalSecret `
+--tenant $servicePrincipalTenantId
 
 az group create `
   --name RG01 `
